@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtInput = new System.Windows.Forms.RichTextBox();
             this.btnRun = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtOutput = new System.Windows.Forms.RichTextBox();
             this.lblInput = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // txtInput
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 85);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(609, 472);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.txtInput.Location = new System.Drawing.Point(12, 85);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(609, 472);
+            this.txtInput.TabIndex = 0;
+            this.txtInput.Text = "";
             // 
             // btnRun
             // 
@@ -54,13 +54,13 @@
             this.btnRun.Text = "RUN";
             this.btnRun.UseVisualStyleBackColor = true;
             // 
-            // richTextBox2
+            // txtOutput
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(641, 85);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(323, 472);
-            this.richTextBox2.TabIndex = 2;
-            this.richTextBox2.Text = "";
+            this.txtOutput.Location = new System.Drawing.Point(641, 85);
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.Size = new System.Drawing.Size(323, 472);
+            this.txtOutput.TabIndex = 2;
+            this.txtOutput.Text = "";
             // 
             // lblInput
             // 
@@ -91,6 +91,7 @@
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Form1
             // 
@@ -100,9 +101,9 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblInput);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.btnRun);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtInput);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -112,9 +113,9 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtInput;
         private System.Windows.Forms.Button btnRun;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox txtOutput;
         private System.Windows.Forms.Label lblInput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClear;

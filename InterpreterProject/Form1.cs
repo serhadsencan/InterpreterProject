@@ -16,5 +16,10 @@ namespace InterpreterProject
         {
             InitializeComponent();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtInput.Text = "";
+        }
     }
 }
