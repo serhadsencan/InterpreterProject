@@ -21,5 +21,15 @@ namespace InterpreterProject
         {
             txtInput.Text = "";
         }
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            Lexer lexer = new Lexer(txtInput.Text);
+            while (lexer.position< lexer.text.Length)
+            {
+                Console.WriteLine(lexer.getToken().type);
+                lexer.increasePos();
+            }
+        }
     }
 }

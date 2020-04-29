@@ -9,6 +9,7 @@ namespace InterpreterProject
     public enum TokenType
     {
         INTEGER,        // int 
+        CHAR,           // Char
         PLUS,           // '+' Plus
         MINUS,          // '-' Minus
         MUL,            // '*' Multiply
@@ -16,13 +17,15 @@ namespace InterpreterProject
         LPAREN,         // '(' left paranthesis
         RPAREN,         // ')' right paranthesis
         GTR,            // '>' greater than 
-        LSS,            // '<' lesser than
+        LSS,            // '<' lesser than      // büyük küçük olayı değilmiş bu print olarak çalışıyor.
         EQL,            // '=' Equal
         SEMICOLON,      // ';' semicolon
         MOD,            // '%' Mod
         BECOMES,        // ':' iki nokta 
         QMARK,          // '?' Question mark
-        EOF             // end of function 
+        EOF,            // end of function 
+        WHITESPACE,
+        UNDEFINED       // Bulamadığımız tokenler için
     }
     public class Token
     {
