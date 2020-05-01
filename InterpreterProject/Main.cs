@@ -24,7 +24,7 @@ namespace InterpreterProject
 
         private void btnRun_Click(object sender, EventArgs e)
         {
-            Lexer lexer = new Lexer(txtInput.Text);
+            Lexer lexer = new Lexer(txtInput.Text.Replace(" ",""));
             while (lexer.position< lexer.text.Length)
             {
                 Console.WriteLine(lexer.getToken().type);
