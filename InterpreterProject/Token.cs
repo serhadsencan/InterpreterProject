@@ -18,8 +18,8 @@ namespace InterpreterProject
         RPAREN,         // ')' right paranthesis
         LBRACKET,       // '{' Left curly bracket
         RBRACKET,       // '}' right curly bracket
-        GRT,            // '>' greater than 
-        LSS,            // '<' lesser than      // büyük küçük olayı değilmiş bu print olarak çalışıyor.
+        READ,            // '>' Bir input okumak isteğinimizde kullanıyoruz
+        WRITE,            // '<' Bir input yazdırmak istediğimizde kullanıyoruz
         EQL,            // '=' Equal
         SEMICOLON,      // ';' semicolon
         MOD,            // '%' Mod
@@ -32,16 +32,19 @@ namespace InterpreterProject
         WHITESPACE,
         UNDEFINED       // Bulamadığımız tokenler için
     }
+
     public class Token
     {
         public TokenType type;
         public string value;
         public int index;
-        public Token(TokenType type, string value,int pos)
+        public int Line;
+        public Token(TokenType type, string value,int pos,int line)
         {
             this.type = type;
             this.value = value;
             this.index = pos;
+            this.Line = line;
         }
     }
 }
